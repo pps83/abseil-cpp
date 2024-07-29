@@ -154,7 +154,7 @@ CpuType GetIntelCpuType() {
             case 0xad:  // Granite Rapids
               return CpuType::kIntelGraniterapidsap;
             default:
-              return CpuType::kUnknown;
+              return model_num > 0x56 ? CpuType::kIntelSkylake : CpuType::kUnknown; // force newer Intel CPUs to be tested as Skylake
           }
         default:
           return CpuType::kUnknown;
@@ -215,7 +215,7 @@ CpuType GetAmdCpuType() {
         case 0x44:  // Stepping A0
           return CpuType::kAmdRyzenV3000;
         default:
-          return CpuType::kUnknown;
+          return model_num > 0x11 ? CpuType::kAmdRyzenV3000 : CpuType::kUnknown; // force newer AMD CPUs to be tested as kAmdRyzenV3000
       }
       break;
     case 0x1A:
