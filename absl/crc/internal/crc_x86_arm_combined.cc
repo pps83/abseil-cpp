@@ -643,6 +643,7 @@ CRCImpl* TryNewCRC32AcceleratedX86ARMCombined() {
     case CpuType::kAmdNaples:
     case CpuType::kAmdMilan:
     case CpuType::kAmdGenoa:
+    case CpuType::kAmdRyzenV3000:
     case CpuType::kAmdTurin:
       return new CRC32AcceleratedX86ARMCombinedMultipleStreams<
           3, 1, CutoffStrategy::Fold3>();
