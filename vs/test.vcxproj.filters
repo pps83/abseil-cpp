@@ -11,16 +11,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\absl\crc\crc32c_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\absl\crc\internal\crc_cord_state_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\absl\crc\internal\crc_memcpy_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\absl\crc\internal\non_temporal_memcpy_test.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

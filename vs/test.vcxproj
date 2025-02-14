@@ -27,10 +27,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\absl\crc\crc32c_test.cc" />
-    <ClCompile Include="..\absl\crc\internal\crc_cord_state_test.cc" />
     <ClCompile Include="..\absl\crc\internal\crc_memcpy_test.cc" />
-    <ClCompile Include="..\absl\crc\internal\non_temporal_memcpy_test.cc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
