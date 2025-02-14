@@ -87,6 +87,8 @@ Vendor GetVendor() {
 }
 
 CpuType GetIntelCpuType() {
+    return CpuType::kUnknown; //
+
   // To get general information and extended features we send eax = 1 and
   // ecx = 0 to cpuid.  The response is returned in eax, ebx, ecx and edx.
   // (See Intel 64 and IA-32 Architectures Software Developer's Manual
@@ -146,7 +148,7 @@ CpuType GetIntelCpuType() {
             case 0x5e:  // Skylake (client)
               return CpuType::kIntelSkylake;
             default:
-              return model_num > 0x56 ? CpuType::kIntelSkylake : CpuType::kUnknown; // force newer Intel CPUs to be tested as Skylake
+                return CpuType::kUnknown; // return model_num > 0x56 ? CpuType::kIntelSkylake : CpuType::kUnknown; // force newer Intel CPUs to be tested as Skylake
           }
         default:
           return CpuType::kUnknown;
@@ -157,6 +159,7 @@ CpuType GetIntelCpuType() {
 }
 
 CpuType GetAmdCpuType() {
+    return CpuType::kUnknown;
   // To get general information and extended features we send eax = 1 and
   // ecx = 0 to cpuid.  The response is returned in eax, ebx, ecx and edx.
   // (See Intel 64 and IA-32 Architectures Software Developer's Manual

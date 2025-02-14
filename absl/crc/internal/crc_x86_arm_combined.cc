@@ -33,7 +33,9 @@
     defined(ABSL_CRC_INTERNAL_HAVE_X86_SIMD)
 #define ABSL_INTERNAL_CAN_USE_SIMD_CRC32C
 #endif
-
+#ifndef ABSL_INTERNAL_CAN_USE_SIMD_CRC32C
+#error simd crc32 is not available
+#endif
 namespace absl {
 ABSL_NAMESPACE_BEGIN
 namespace crc_internal {
