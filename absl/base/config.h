@@ -292,16 +292,13 @@ static_assert(ABSL_INTERNAL_INLINE_NAMESPACE_STR[0] != 'h' ||
 //
 // Note: __SIZEOF_INT128__ is defined by Clang and GCC when __int128 is
 // supported, but we avoid using it in certain cases:
-// * On Clang:
-//   * Building using Clang for Windows, where the Clang runtime library has
-//     128-bit support only on LP64 architectures, but Windows is LLP64.
 // * On Nvidia's nvcc:
 //   * nvcc also defines __GNUC__ and __SIZEOF_INT128__, but not all versions
 //     actually support __int128.
 #ifdef ABSL_HAVE_INTRINSIC_INT128
 #error ABSL_HAVE_INTRINSIC_INT128 cannot be directly set
 #elif defined(__SIZEOF_INT128__)
-#if (defined(__clang__) && !defined(_WIN32)) ||           \
+#if (defined(__clang__)) || \
     (defined(__CUDACC__) && __CUDACC_VER_MAJOR__ >= 9) || \
     (defined(__GNUC__) && !defined(__clang__) && !defined(__CUDACC__))
 #define ABSL_HAVE_INTRINSIC_INT128 1
