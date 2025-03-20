@@ -342,3 +342,13 @@ std::ostream& operator<<(std::ostream& os, int128 v) {
 
 ABSL_NAMESPACE_END
 }  // namespace absl
+
+#if defined(_MSC_VER) && defined(ABSL_HAVE_INTRINSIC_INT128)
+#if defined(_M_X64)
+#pragma comment(lib, "clang_rt.builtins-x86_64.lib")
+#elif defined(_M_IX86)
+#pragma comment(lib, "clang_rt.builtins-i386.lib")
+#elif defined(__aarch64__)
+#pragma comment(lib, "clang_rt.builtins-aarch64.lib")
+#endif
+#endif
