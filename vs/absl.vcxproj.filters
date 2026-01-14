@@ -185,9 +185,6 @@
     <ClCompile Include="..\absl\hash\internal\city.cc">
       <Filter>Source Files\hash</Filter>
     </ClCompile>
-    <ClCompile Include="..\absl\hash\internal\low_level_hash.cc">
-      <Filter>Source Files\hash</Filter>
-    </ClCompile>
     <ClCompile Include="..\absl\log\die_if_null.cc">
       <Filter>Source Files\log</Filter>
     </ClCompile>
@@ -384,9 +381,6 @@
       <Filter>Source Files\strings</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\strings\numbers.cc">
-      <Filter>Source Files\strings</Filter>
-    </ClCompile>
-    <ClCompile Include="..\absl\strings\string_view.cc">
       <Filter>Source Files\strings</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\strings\str_cat.cc">

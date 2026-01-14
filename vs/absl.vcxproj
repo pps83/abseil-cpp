@@ -137,7 +137,6 @@
     <ClCompile Include="..\absl\flags\usage.cc" />
     <ClCompile Include="..\absl\flags\usage_config.cc" />
     <ClCompile Include="..\absl\hash\internal\city.cc" />
-    <ClCompile Include="..\absl\hash\internal\low_level_hash.cc" />
     <ClCompile Include="..\absl\log\die_if_null.cc" />
     <ClCompile Include="..\absl\log\flags.cc" />
     <ClCompile Include="..\absl\log\globals.cc" />
@@ -204,7 +203,6 @@
     <ClCompile Include="..\absl\strings\internal\utf8.cc" />
     <ClCompile Include="..\absl\strings\match.cc" />
     <ClCompile Include="..\absl\strings\numbers.cc" />
-    <ClCompile Include="..\absl\strings\string_view.cc" />
     <ClCompile Include="..\absl\strings\str_cat.cc" />
     <ClCompile Include="..\absl\strings\str_replace.cc" />
     <ClCompile Include="..\absl\strings\str_split.cc" />
