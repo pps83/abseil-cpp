@@ -18,6 +18,7 @@
 # As of 2024-07-01, CMake 3.16 is the minimum supported version.
 cmake_minimum_required(VERSION 3.16)
 
+set(CMAKE_CXX_STANDARD 20)
 # Allow the user to specify the CMAKE_MSVC_DEBUG_INFORMATION_FORMAT
 if (POLICY CMP0141)
   cmake_policy(SET CMP0141 NEW)
