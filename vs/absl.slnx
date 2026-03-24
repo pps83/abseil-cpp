@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="absl.vcxproj" Id="6713f5e3-9f12-484b-a14b-fd7eaf87267a" />
+</Solution>
