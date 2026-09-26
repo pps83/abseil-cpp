@@ -466,6 +466,14 @@ pid_t GetTID() {
   return static_cast<pid_t>(zx_thread_self());
 }
 
+#elif defined(__CYGWIN__)
+
+pid_t GetTID() {
+  // Cygwin's `pthread_t` is a pointer; its address identifies the thread within
+  // the process.
+  return static_cast<pid_t>(reinterpret_cast<uintptr_t>(pthread_self()));
+}
+
 #else
 
 // Fallback implementation of `GetTID` using `pthread_self`.
