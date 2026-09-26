@@ -377,7 +377,7 @@ static_assert(ABSL_INTERNAL_INLINE_NAMESPACE_STR[0] != 'h' ||
     defined(__myriad2__) || defined(__HAIKU__) || defined(__OpenBSD__) || \
     defined(__NetBSD__) || defined(__QNX__) || defined(__VXWORKS__) ||    \
     defined(__hexagon__) || defined(__XTENSA__) ||                        \
-    defined(_WASI_EMULATED_MMAN)
+    defined(_WASI_EMULATED_MMAN) || defined(__CYGWIN__)
 #define ABSL_HAVE_MMAP 1
 #endif
 
