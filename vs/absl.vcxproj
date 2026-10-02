@@ -171,8 +171,6 @@
     <ClCompile Include="..\absl\profiling\internal\periodic_sampler.cc" />
     <ClCompile Include="..\absl\random\discrete_distribution.cc" />
     <ClCompile Include="..\absl\random\gaussian_distribution.cc" />
-    <ClCompile Include="..\absl\random\internal\chi_square.cc" />
-    <ClCompile Include="..\absl\random\internal\distribution_test_util.cc" />
     <ClCompile Include="..\absl\random\internal\entropy_pool.cc" />
     <ClCompile Include="..\absl\random\internal\randen.cc" />
     <ClCompile Include="..\absl\random\internal\randen_detect.cc" />
