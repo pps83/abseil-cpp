@@ -130,9 +130,12 @@
     <ClCompile Include="..\absl\crc\internal\crc_x86_arm_combined.cc" />
     <ClCompile Include="..\absl\debugging\failure_signal_handler.cc" />
     <ClCompile Include="..\absl\debugging\internal\address_is_readable.cc" />
+    <ClCompile Include="..\absl\debugging\internal\decode_rust_punycode.cc" />
     <ClCompile Include="..\absl\debugging\internal\demangle.cc" />
+    <ClCompile Include="..\absl\debugging\internal\demangle_rust.cc" />
     <ClCompile Include="..\absl\debugging\internal\elf_mem_image.cc" />
     <ClCompile Include="..\absl\debugging\internal\examine_stack.cc" />
+    <ClCompile Include="..\absl\debugging\internal\utf8_for_code_point.cc" />
     <ClCompile Include="..\absl\debugging\internal\vdso_support.cc" />
     <ClCompile Include="..\absl\debugging\leak_check.cc" />
     <ClCompile Include="..\absl\debugging\stacktrace.cc" />

@@ -125,13 +125,22 @@
     <ClCompile Include="..\absl\debugging\internal\address_is_readable.cc">
       <Filter>Source Files\debugging</Filter>
     </ClCompile>
+    <ClCompile Include="..\absl\debugging\internal\decode_rust_punycode.cc">
+      <Filter>Source Files\debugging</Filter>
+    </ClCompile>
     <ClCompile Include="..\absl\debugging\internal\demangle.cc">
+      <Filter>Source Files\debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\absl\debugging\internal\demangle_rust.cc">
       <Filter>Source Files\debugging</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\debugging\internal\elf_mem_image.cc">
       <Filter>Source Files\debugging</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\debugging\internal\examine_stack.cc">
+      <Filter>Source Files\debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\absl\debugging\internal\utf8_for_code_point.cc">
       <Filter>Source Files\debugging</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\debugging\internal\vdso_support.cc">
