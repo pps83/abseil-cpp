@@ -104,6 +104,7 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\absl\base\internal\cpu_detect.cc" />
     <ClCompile Include="..\absl\base\internal\cycleclock.cc" />
     <ClCompile Include="..\absl\base\internal\hardening.cc" />
     <ClCompile Include="..\absl\base\internal\low_level_alloc.cc" />
@@ -121,7 +122,6 @@
     <ClCompile Include="..\absl\container\internal\hashtablez_sampler_force_weak_definition.cc" />
     <ClCompile Include="..\absl\container\internal\raw_hash_set.cc" />
     <ClCompile Include="..\absl\crc\crc32c.cc" />
-    <ClCompile Include="..\absl\crc\internal\cpu_detect.cc" />
     <ClCompile Include="..\absl\crc\internal\crc.cc" />
     <ClCompile Include="..\absl\crc\internal\crc_cord_state.cc" />
     <ClCompile Include="..\absl\crc\internal\crc_memcpy_fallback.cc" />
@@ -185,6 +185,7 @@
     <ClCompile Include="..\absl\random\seed_sequences.cc" />
     <ClCompile Include="..\absl\status\internal\status_internal.cc" />
     <ClCompile Include="..\absl\status\status.cc" />
+    <ClCompile Include="..\absl\status\status_builder.cc" />
     <ClCompile Include="..\absl\status\statusor.cc" />
     <ClCompile Include="..\absl\status\status_payload_printer.cc" />
     <ClCompile Include="..\absl\strings\ascii.cc" />
@@ -254,6 +255,7 @@
     <ClCompile Include="..\absl\time\internal\cctz\src\zone_info_source.cc" />
     <ClCompile Include="..\absl\time\simulated_clock.cc" />
     <ClCompile Include="..\absl\time\time.cc" />
+    <ClCompile Include="..\absl\types\source_location.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

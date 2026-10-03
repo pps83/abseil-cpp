@@ -51,8 +51,14 @@
     <Filter Include="Source Files\time">
       <UniqueIdentifier>{04b84cd4-d7df-4c79-b86c-fef03b5eead1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\types">
+      <UniqueIdentifier>{f6a08e99-e1bd-4b74-bbfa-2999ce29f3c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\absl\base\internal\cpu_detect.cc">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
     <ClCompile Include="..\absl\base\internal\cycleclock.cc">
       <Filter>Source Files\base</Filter>
     </ClCompile>
@@ -96,9 +102,6 @@
       <Filter>Source Files\container</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\crc\crc32c.cc">
-      <Filter>Source Files\crc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\absl\crc\internal\cpu_detect.cc">
       <Filter>Source Files\crc</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\crc\internal\crc.cc">
@@ -288,6 +291,9 @@
       <Filter>Source Files\status</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\status\status.cc">
+      <Filter>Source Files\status</Filter>
+    </ClCompile>
+    <ClCompile Include="..\absl\status\status_builder.cc">
       <Filter>Source Files\status</Filter>
     </ClCompile>
     <ClCompile Include="..\absl\status\statusor.cc">
@@ -502,6 +508,9 @@
     </ClCompile>
     <ClCompile Include="..\absl\time\simulated_clock.cc">
       <Filter>Source Files\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\absl\types\source_location.cc">
+      <Filter>Source Files\types</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
