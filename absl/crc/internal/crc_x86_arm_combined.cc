@@ -903,9 +903,9 @@ CRCImpl* TryNewCRC32AcceleratedX86ARMCombined() {
       }
 #else
     default:
-      // Something else, play it safe and assume slow PCLMULQDQ.
+      // A CPU newer than this list: assume fast PCLMULQDQ, like every recent one.
       return new CRC32AcceleratedX86ARMCombinedMultipleStreams<
-          3, 0, PclmulStreamType::PCLMUL>();
+          3, 2, PclmulStreamType::PCLMUL>();
 #endif
   }
 }
