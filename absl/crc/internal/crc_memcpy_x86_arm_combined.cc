@@ -435,9 +435,18 @@ CrcMemcpy::ArchSpecificEngines CrcMemcpy::GetArchSpecificEngines() {
           /*.temporal=*/new AcceleratedCrcMemcpyEngine<3, 0>(),
           /*.non_temporal=*/new CrcNonTemporalMemcpyEngine(),
       };
+#if defined(ABSL_INTERNAL_HAVE_X86_64_ACCELERATED_CRC_MEMCPY_ENGINE)
+    default:
+      // An x86-64 CPU newer than this list: take the path of the recent ones.
+      return {
+          /*.temporal=*/new AcceleratedCrcMemcpyEngine<3, 0>(),
+          /*.non_temporal=*/new CrcNonTemporalMemcpyAVXEngine(),
+      };
+#else
     default:
       return {/*.temporal=*/new FallbackCrcMemcpyEngine(),
               /*.non_temporal=*/new FallbackCrcMemcpyEngine()};
+#endif
   }
 #endif  // UNDEFINED_BEHAVIOR_SANITIZER
 }
