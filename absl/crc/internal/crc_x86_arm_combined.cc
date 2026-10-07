@@ -453,7 +453,7 @@ class CRC32AcceleratedX86ARMCombinedMultipleStreamsBase
   }
 
 #if defined(ABSL_CRC_INTERNAL_HAVE_X86_SIMD) && defined(__AVX__) && \
-    (!defined(_MSC_VER) || defined(__clang__))
+    defined(__x86_64__) && (!defined(_MSC_VER) || defined(__clang__))
   // This is only used if we have vector version of PCLMULQDQ.
   // We don't have it on arm, and it isn't supported by default
   // compiler targets on x86. If we want to use it, we need to either use
@@ -850,7 +850,7 @@ CRCImpl* TryNewCRC32AcceleratedX86ARMCombined() {
     case CpuType::kAmdGenoa:
     case CpuType::kAmdTurin:
 #if defined(ABSL_CRC_INTERNAL_HAVE_X86_SIMD) && defined(__AVX__) && \
-    (!defined(_MSC_VER) || defined(__clang__))
+    defined(__x86_64__) && (!defined(_MSC_VER) || defined(__clang__))
       // We don't have vector pclmul on arm, but this still needs to
       // compile.
       return new CRC32AcceleratedX86ARMCombinedMultipleStreams<
